@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+/.idea/
+/bitrix/
+/upload/
+/local/vendor/
+/.vscode/
+!/bitrix/php_interface/dbconn.php

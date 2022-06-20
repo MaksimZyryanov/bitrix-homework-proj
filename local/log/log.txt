@@ -1,0 +1,173 @@
+Host: 1c-bitrix-homework.learn
+Date: 2022-06-21 00:49:52
+Module: 
+array (
+  'ACTIVE' => 'Y',
+  'MODIFIED_BY' => '1',
+  'IBLOCK_ID' => 2,
+  'ACTIVE_FROM' => '',
+  'ACTIVE_TO' => '',
+  'SORT' => '500',
+  'NAME' => 'ФутболкаНовая',
+  'CODE' => 'futbolkanovaya',
+  'TAGS' => '',
+  'PREVIEW_TEXT' => '',
+  'PREVIEW_TEXT_TYPE' => 'text',
+  'DETAIL_TEXT' => '',
+  'DETAIL_TEXT_TYPE' => 'text',
+  'TMP_ID' => 13,
+  'PROPERTY_VALUES' => 
+  array (
+    2 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    3 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    4 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    5 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n1' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n2' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n3' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n4' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    6 => '',
+    7 => '',
+    8 => '',
+    9 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    10 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    11 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    12 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    14 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n1' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n2' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n3' => 
+      array (
+        'VALUE' => '',
+      ),
+      'n4' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    18 => '',
+    15 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    16 => 
+    array (
+      'n0' => 
+      array (
+        'VALUE' => '',
+      ),
+    ),
+    13 => 
+    array (
+    ),
+    17 => 
+    array (
+    ),
+  ),
+  'IBLOCK_SECTION' => 
+  array (
+    0 => 10,
+  ),
+  'IPROPERTY_TEMPLATES' => 
+  array (
+    'ELEMENT_META_TITLE' => '',
+    'ELEMENT_META_KEYWORDS' => '',
+    'ELEMENT_META_DESCRIPTION' => '',
+    'ELEMENT_PAGE_TITLE' => '',
+    'ELEMENT_PREVIEW_PICTURE_FILE_ALT' => '',
+    'ELEMENT_PREVIEW_PICTURE_FILE_TITLE' => '',
+    'ELEMENT_PREVIEW_PICTURE_FILE_NAME' => '',
+    'ELEMENT_DETAIL_PICTURE_FILE_ALT' => '',
+    'ELEMENT_DETAIL_PICTURE_FILE_TITLE' => '',
+    'ELEMENT_DETAIL_PICTURE_FILE_NAME' => '',
+  ),
+  'SEARCHABLE_CONTENT' => 'ФУТБОЛКАНОВАЯ
+
+',
+  'CREATED_BY' => 1,
+  '~DATE_CREATE' => 'now()',
+  '~TIMESTAMP_X' => 'now()',
+  'XML_ID' => 340,
+  'ID' => 340,
+  'RESULT' => 340,
+)
+    OnAfterIBlockElementAddHandler < ExecuteModuleEventEx < CAllIBlockElement::Add < require
+	C:\OpenServer\domains\1c-bitrix-homework\bitrix\modules\main\classes\general\module.php:465
+	C:\OpenServer\domains\1c-bitrix-homework\bitrix\modules\iblock\classes\general\iblockelement.php:3658
+	C:\OpenServer\domains\1c-bitrix-homework\bitrix\modules\iblock\admin\iblock_element_edit.php:1060
+	C:\OpenServer\domains\1c-bitrix-homework\bitrix\admin\iblock_element_edit.php:1
+----------
