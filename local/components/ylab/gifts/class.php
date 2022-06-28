@@ -110,7 +110,7 @@ class PromoComponent extends CBitrixComponent
      * Инкрементируем свойство количества подарков на 1 при выполнении условий
      * @return void
      */
-    private function checkCountOfGifts($itemsPrice)
+    private function checkCountOfGifts($itemsPrice): void
     {
         $counter = 0;
         $dividedItems = array();
