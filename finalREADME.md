@@ -54,3 +54,12 @@
     4. [При нажатии](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L92-L107) "
            Хочу столько" добавляется в корзину текущего пользователя товар "Подарок" в количестве указанном в поле "
            Количество подарков"
+
+## Задание #2
+
+1. [Создан модуль](https://github.com/MaksimZyryanov/bitrix-homework-proj/tree/main/local/modules/ylab.learnmodule)
+   
+2. [Созданы настройки](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/options.php#L41-L66) со всеми возможными типами полей
+    
+3. [Разработана установка модуля](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/install/index.php#L55-L84)
+       в 3 шага. На каждом шаге пользователем заполняются настройки модуля из пункта 2.
