@@ -48,7 +48,7 @@
      Хочу столько" добавляется в корзину текущего пользователя товар "Подарок" в количестве указанном в поле "
      Количество подарков"
 
-## Задание #2
+## Задание #3
 
 1. [Создан модуль](https://github.com/MaksimZyryanov/bitrix-homework-proj/tree/main/local/modules/ylab.learnmodule)
 2. [Созданы настройки](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/options.php#L41-L66) со всеми возможными типами полей
