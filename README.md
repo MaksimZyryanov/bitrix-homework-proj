@@ -1,42 +1,65 @@
-# Учебный проект по 1C-Bitrix для Y_LAB University
+# Учебный проект по bitrix для Y_lab university
 
-Домашнее задание по решению Битрикс 'Бизнес' (магазин)
+Выполнил: Зырянов Максим
 
-_Выполняет: Зырянов Максим_
+## Задание #1
 
-## Все чеклисты для предыдущих заданий и полный ход работы - [ссылка](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/changeLog.md)
+1. Развернута локальная среда разработки и установлена БУС ( выбрана редакция "Бизнес")
+2. Создан собственный Тип инфоблока - "Контакты"
+   | [Скриншот](https://github.com/MaksimKuwsz/screenshots/blob/main/homework-2/type-contacts.jpg)
+3. Создан ИБ "Адреса", который содержит свойства: Город, Улица, Номер дома, Квартира.
+   | [Скриншот](https://github.com/MaksimKuwsz/screenshots/blob/main/homework-2/ib-addresses.jpg)
+4. Создан ИБ "Контакты", который содержит свойства: ФИО, Телефон, Адрес (данное свойство является связью с элементами
+   первого ИБ из пункта 3).
+   | [Скриншот](https://github.com/MaksimKuwsz/screenshots/blob/main/homework-2/ib-contacts.jpg)
+5.
+Добавлен [раздел для отображения данных из ИБ](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/lesson%202/index.php)
+, на котором подключен компонент `bitrix:news.list`
 
-## Чеклист работы над ошибками для ДЗ №3
+6.
+Разработан [шаблон компонента для bitrix:news.list с отображением информации из ИБ "Контакты"](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/templates/.default/components/bitrix/news.list/welcome/template.php)
+. Каждый блок должен содержит следующую информацию: ФИО, Телефон, Город, Улица, Номер дома, Квартира.
 
-1. [Добавлены все возможные типы полей](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/options.php#L41-L66), в соответствии с [данным источником](https://www.bitrix.ua/download/files/ppt/web170614mp/Interactive_map_2.pdf)
+7. [Подготовлена миграция](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/php_interface/migrations/Version20220603053407.php)
+   для созданного типа инфоблока `contacts` и двух инфоблоков `contacts` и `addresses`.
 
-2. Оставлен один ` dbconn.php` в
-   папке [bitrix/php_interface/dbconn.php](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/bitrix/php_interface/dbconn.php#L22)
+## Задание #2
 
-3. [Реализована установка модуля в 3 шага](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/install/index.php#L55-L84):
-   при установке последовательно выводятся 3 страницы с разными настройками модуля:
+- [Проверено](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/templates/.default/components/bitrix/sale.basket.basket/custom_basket/mutator.php#L347)
+  , что общая сумма заказа не меньше 2000р. Если сумма меньше указанной, то кнопка "Оформить заказ" не отображается и
+  выдается соответствующее сообщение.
+  [Учтена](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/templates/.default/components/bitrix/sale.order.ajax/custom_order/template.php#L256)
+  данная проверка при оформлении заказа (в случае ввода ссылки на оформление заказа в адресную строку)
+    
 
-## Чеклист 3. домашнего задания №3 к лекции №3
+- [Используя миграции](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/php_interface/migrations/AddGift20220610110919.php) 
+  добавлен новый товар "Подарок"
+    
 
-- **_Редактирование решений предыдущего ДЗ в соответствии с эталонным решением из лекции №3:_**
+- [Разработан](https://github.com/MaksimKuwsz/bitrix-homework-proj/tree/main/local/components/ylab/gifts) компонент.
+      Логика компонента следующая:
+  
+  1. [Получаются](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L59-L68)
+           все товары в корзине текущего пользователя
+     
+  2. [Если](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L113-L127)
+           в корзине есть минимум 3 товара с ценой более 500р,
+           то [добавляется](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/01f1dfa23a7a6a893cc34bd463285622996dcedb/local/components/ylab/gifts/class.php#L142-L158)
+           в корзину пользователя товар "Подарок".
+     
+    3. В шаблоне 
+       компонента [добавлена](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/templates/.default/template.php#L21-L31)
+           форма. Форма содержит: тестовое поле "Количество подарков" и кнопку "Хочу столько"
+        
+    4. [При нажатии](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L92-L107) "
+           Хочу столько" добавляется в корзину текущего пользователя товар "Подарок" в количестве указанном в поле "
+           Количество подарков"
 
-    1. [Переработан](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/php_interface/migrations/AddGift20220610110919.php)
-       файл миграции для добавления товара "Подарок"
-    2. [Переработан](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php)
-       класс компонента, подправлена логика добавления "Подарка" в корзину
+## Задание #2
 
-- **_Выполнение текущего ДЗ:_**
-    1. [Создан модуль](https://github.com/MaksimZyryanov/bitrix-homework-proj/tree/main/local/modules/ylab.learnmodule)
-    2. [Созданы настройки](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/options.php#L39-L54)
-       модуля, использовано n типов полей:
-        1. Поле строки
-        2. Кнопка
-        3. Поле текста
-        4. Выпадающий список (selectbox)
-    3. [Разработана установка модуля](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/install/index.php#L46-L48)
-       в 3 шага. На каждом шаге заполнены настройки модуля из пункта ii.
-- **_Доп. задание:_**
-    - [Разработан функционал](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/php_interface/init.php#L5-L12):
-      при добавлении нового элемента ИБ (любого, в нашем варианте это "Каталог") необходимо сохранять "имя" нового
-      элемента в файл лога (для проверки был добавлен новый товар -
-      футболка: [/local/log/log.txt](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/log/log.txt))
+1. [Создан модуль](https://github.com/MaksimZyryanov/bitrix-homework-proj/tree/main/local/modules/ylab.learnmodule)
+   
+2. [Созданы настройки](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/options.php#L41-L66) со всеми возможными типами полей
+    
+3. [Разработана установка модуля](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/install/index.php#L55-L84)
+       в 3 шага. На каждом шаге пользователем заполняются настройки модуля из пункта 2.
