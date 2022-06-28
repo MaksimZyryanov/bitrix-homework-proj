@@ -42,7 +42,7 @@
   1. [Получаются](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L59-L68)
            все товары в корзине текущего пользователя
      
-  2. [Если](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L115-L129)
+  2. [Если](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L113-L127)
            в корзине есть минимум 3 товара с ценой более 500р,
            то [добавляется](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/01f1dfa23a7a6a893cc34bd463285622996dcedb/local/components/ylab/gifts/class.php#L142-L158)
            в корзину пользователя товар "Подарок".
