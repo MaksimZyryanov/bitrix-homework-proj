@@ -38,19 +38,19 @@
 
 - [Разработан](https://github.com/MaksimKuwsz/bitrix-homework-proj/tree/main/local/components/ylab/gifts) компонент.
       Логика компонента следующая:
-
-        1. [Получаются](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L59-L68)
+  
+  1. [Получаются](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L59-L68)
            все товары в корзине текущего пользователя
-
-        2. [Если](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L115-L129)
+     
+  2. [Если](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L115-L129)
            в корзине есть минимум 3 товара с ценой более 500р,
            то добавляется(https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/01f1dfa23a7a6a893cc34bd463285622996dcedb/local/components/ylab/gifts/class.php#L142-L158)
            в корзину пользователя товар "Подарок".
-
-        3. В шаблоне
-           компонента [добавлена](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/templates/.default/template.php#L21-L31)
+     
+    3. В шаблоне 
+       компонента [добавлена](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/templates/.default/template.php#L21-L31)
            форма. Форма содержит: тестовое поле "Количество подарков" и кнопку "Хочу столько"
-
-        4. [При нажатии](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L92-L107) "
+        
+    4. [При нажатии](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L92-L107) "
            Хочу столько" добавляется в корзину текущего пользователя товар "Подарок" в количестве указанном в поле "
            Количество подарков"
