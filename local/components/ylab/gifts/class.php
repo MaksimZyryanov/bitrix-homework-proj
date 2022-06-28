@@ -107,10 +107,8 @@ class PromoComponent extends CBitrixComponent
     }
 
     /**
-     * Определим метод который возвращает bool значение - доступен ли пользователю подарок
-     * @param int[] $items
-     *
-     * @return int
+     * Инкрементируем свойство количества подарков на 1 при выполнении условий
+     * @return void
      */
     private function checkCountOfGifts($itemsPrice)
     {
