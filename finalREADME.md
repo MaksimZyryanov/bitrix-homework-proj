@@ -30,35 +30,27 @@
   выдается соответствующее сообщение.
   [Учтена](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/templates/.default/components/bitrix/sale.order.ajax/custom_order/template.php#L256)
   данная проверка при оформлении заказа (в случае ввода ссылки на оформление заказа в адресную строку)
+    
 
-      - Для вывода сообщений реализована поддержка мультиязыковости
+- [Используя миграции](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/php_interface/migrations/AddGift20220610110919.php) 
+  добавлен новый товар "Подарок"
+    
 
-          -
-          для [корзины](https://github.com/MaksimKuwsz/bitrix-homework-proj/tree/main/local/templates/.default/components/bitrix/sale.basket.basket/custom_basket/lang)
-          -
-          для [заказа](https://github.com/MaksimKuwsz/bitrix-homework-proj/tree/main/local/templates/.default/components/bitrix/sale.order.ajax/custom_order/lang)
-
-    - [Используя миграции](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/php_interface/migrations/Version20220603053408.php)
-      добавлен новый товар "Подарок"
-
-    - [Разработан](https://github.com/MaksimKuwsz/bitrix-homework-proj/tree/main/local/components/ylab/gifts) компонент.
+- [Разработан](https://github.com/MaksimKuwsz/bitrix-homework-proj/tree/main/local/components/ylab/gifts) компонент.
       Логика компонента следующая:
 
-        1. [Получаются](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L42)
+        1. [Получаются](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L59-L68)
            все товары в корзине текущего пользователя
 
-        2. [Если](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L125)
+        2. [Если](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L115-L129)
            в корзине есть минимум 3 товара с ценой более 500р,
-           то [добавляется](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L152)
+           то добавляется(https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/01f1dfa23a7a6a893cc34bd463285622996dcedb/local/components/ylab/gifts/class.php#L142-L158)
            в корзину пользователя товар "Подарок".
 
         3. В шаблоне
-           компонента [добавлена](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/components/ylab/gifts/templates/.default/template.php#L21)
+           компонента [добавлена](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/templates/.default/template.php#L21-L31)
            форма. Форма содержит: тестовое поле "Количество подарков" и кнопку "Хочу столько"
 
-        4. [При нажатии](https://github.com/MaksimKuwsz/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L99) "
+        4. [При нажатии](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/components/ylab/gifts/class.php#L92-L107) "
            Хочу столько" добавляется в корзину текущего пользователя товар "Подарок" в количестве указанном в поле "
            Количество подарков"
-
-        - _Пояснение к последнему пункту. Было принято решение разделить обработку GET и POST запросов по разным
-          методам_
