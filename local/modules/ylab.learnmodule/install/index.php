@@ -160,7 +160,7 @@ class ylab_learnmodule extends CModule
     }
 
     /**
-     * @return bool
+     * @return bool|void
      */
     public function installDB()
     {

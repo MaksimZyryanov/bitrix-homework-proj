@@ -56,3 +56,8 @@
 2. [Созданы настройки](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/options.php#L41-L66) со всеми возможными типами полей
 3. [Разработана установка модуля](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/modules/ylab.learnmodule/install/index.php#L55-L84)
    в 3 шага. На каждом шаге пользователем заполняются настройки модуля из пункта 2.
+- **_Доп. задание:_**
+    - [Разработан функционал](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/php_interface/init.php#L5-L12):
+      при добавлении нового элемента ИБ (любого, в нашем варианте это "Каталог") необходимо сохранять "имя" нового
+      элемента в файл лога (для проверки был добавлен новый товар -
+      футболка: [/local/log/log.txt](https://github.com/MaksimZyryanov/bitrix-homework-proj/blob/main/local/log/log.txt))
